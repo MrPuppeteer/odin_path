@@ -4,19 +4,56 @@ body {
     text-align: center;
 }
 
+a {
+    color: #1a0dab;
+    text-decoration: none;
+}
+
 a:any-link, button {
     cursor: pointer;
 }
 
-footer div {
+header {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    align-items: center;
+    padding: 6px;
+    justify-content: flex-end;
 }
 
-a {
-    color: #1a0dab;
-    text-decoration: none;
+.header div {
+    box-sizing: border-box;
+    line-height: normal;
+    flex: 0 0 auto;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.header a {
+    font: 13px/27px Roboto,RobotoDraft,Arial,sans-serif;
+    color:rgba(0, 0, 0, 0.87);
+    display: inline-block;
+    padding-left: 15px;
+}
+
+.header a:nth-of-type(2) {
+    padding-right: 15px;
+}
+
+.header svg {
+    color: #5f6368;
+    opacity: 1;
+    fill: currentColor;
+    width: 24px;
+    height: 24px;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
 }
 
 p a {
@@ -24,12 +61,18 @@ p a {
     font-size: small;
 }
 
-p a:hover, p a:active {
+a:hover, a:active {
     text-decoration: underline;
 }
 
 footer {
     background: #f2f2f2;
+}
+
+footer div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .region {
