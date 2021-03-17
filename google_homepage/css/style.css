@@ -1,0 +1,50 @@
+body {
+    font-size: 14px;
+    font-family: arial, sans-serif;
+    text-align: center;
+}
+
+a:any-link, button {
+    cursor: pointer;
+}
+
+footer div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+a {
+    color: #1a0dab;
+    text-decoration: none;
+}
+
+p a {
+    padding: 0 3px;
+    font-size: small;
+}
+
+p a:hover, p a:active {
+    text-decoration: underline;
+}
+
+footer {
+    background: #f2f2f2;
+}
+
+.region {
+    padding: 15px 30px;
+    border-bottom: 1px solid #dadce0;
+    color: rgba(0, 0, 0, .54);
+    font-size: 15px;
+}
+
+.footer {
+    padding: 0 20px;
+}
+
+.footer a {
+    color: #70757a;
+    display: block;
+    padding: 15px;
+}
