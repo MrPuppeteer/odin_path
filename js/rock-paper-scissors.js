@@ -32,8 +32,12 @@ function game() {
     let plScore = 0;
     let cpScore = 0;
     for (let i = 0; i < 5; i++) {
-        const playerSelection = prompt("select rock, paper, or scissor!");
+        let playerSelection = prompt("select rock, paper, or scissor!");
         const ComputerSelection = computerPlay();
+
+        while (!playerSelection) {
+            playerSelection = prompt("invalid selection")
+        }
 
         const oneRound = playRound(playerSelection, ComputerSelection);
 
@@ -42,6 +46,8 @@ function game() {
         } else if (oneRound === "computer win") {
             cpScore++;
         }
+        console.log(`you choose ${playerSelection}`)
+        console.log(`computer chooses ${ComputerSelection}`)
         console.log(oneRound);
         console.log(`current score is: ${plScore}:${cpScore}`)
     }
