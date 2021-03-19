@@ -1,5 +1,7 @@
 // console.log("Hello world!")
 
+// const start = game();
+
 function computerPlay() {
     const randomMove = Math.ceil(Math.random() * 3);
     if (randomMove === 1) {
@@ -17,9 +19,36 @@ function playRound(plSelect, cpSelect) {
         return "draw"
     } else if (plSelect === "rock" && cpSelect === "scissor" || plSelect === "paper" && cpSelect === "rock" || plSelect === "scissor" && cpSelect === "paper") {
         return "player win"
-    } else {return "computer win"}
+    } else { return "computer win" }
 }
 
-const playerPlay = prompt();
-const game = playRound(playerPlay, computerPlay());
-console.log(game);
+// const playerSelection = prompt();
+// const ComputerSelection = computerPlay();
+
+// const game = playRound(playerPlay, ComputerSelection);
+// console.log(game);
+
+function game() {
+    let plScore = 0;
+    let cpScore = 0;
+    for (let i = 0; i < 5; i++) {
+        const playerSelection = prompt();
+        const ComputerSelection = computerPlay();
+
+        const oneRound = playRound(playerSelection, ComputerSelection);
+
+        if (oneRound === "player win") {
+            plScore++;
+        } else if (oneRound === "computer win") {
+            cpScore++;
+        }
+        console.log(oneRound);
+        console.log(`current score is: ${plScore}:${cpScore}`)
+    }
+    console.log("GAME OVER!")
+    if (plScore > cpScore) {
+        console.log("YOU WON THE GAME!")
+    } else if (plScore < cpScore) {
+        console.log("YOU LOSE!")
+    } else { console.log("IT'S A DRAW") }
+}
