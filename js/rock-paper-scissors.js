@@ -32,7 +32,7 @@ function game() {
     let plScore = 0;
     let cpScore = 0;
     for (let i = 0; i < 5; i++) {
-        const playerSelection = prompt();
+        const playerSelection = prompt("select rock, paper, or scissor!");
         const ComputerSelection = computerPlay();
 
         const oneRound = playRound(playerSelection, ComputerSelection);
